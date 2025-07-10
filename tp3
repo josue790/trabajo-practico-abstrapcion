@@ -1,6 +1,7 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 import math
 class Figura(ABC):
+@abstractmethod
     def calcular_area(self):
         pass
 class Circulo(Figura):
