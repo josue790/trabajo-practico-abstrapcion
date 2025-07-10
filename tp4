@@ -5,8 +5,7 @@ class Notificacion(ABC):
         pass
 class Email(Notificacion):
     def enviar(self, mensaje):
-        return "Enviando email con mensaje:{mensaje}"
+        return "Enviando email: mensaje"
 class SMS(Notificacion):
     def enviar(self, mensaje):
-        return "Enviando SMS con mensaje:{mensaje}"
-
+        return "Enviando SMS: mensaje"
