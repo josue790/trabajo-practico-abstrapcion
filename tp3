@@ -15,3 +15,8 @@ class Rectangulo(Figura):
         self.altura = altura
     def calcular_area(self):
         return self.base * self.altura
+if __name__ == "__main__":
+    circulo = Circulo(4)
+    rectangulo = Rectangulo(5, 3)
+    print("Área del Círculo:", circulo.calcular_area())          
+    print("Área del Rectángulo:", rectangulo.calcular_area()) 
