@@ -8,4 +8,4 @@ class TarjetaCredito(Pago):
         return "Pago con tarjeta de " + str(monto)
 class PayPal(Pago):
     def procesar_pago(self, monto):
-        return "Pago con PayPal de " + str(monto
+        return "Pago con PayPal de " + str(monto)
