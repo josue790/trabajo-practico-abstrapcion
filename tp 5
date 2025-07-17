@@ -1,0 +1,16 @@
+from abc import ABC, abstractmethod
+class Empleado(ABC):
+    @abstractmethod
+    def calcular_sueldo(self):
+        pass
+class EmpleadoPorHora(Empleado):
+    def __init__(self, horas, valor_hora):
+        self.horas = horas
+        self.valor_hora = valor_hora
+    def calcular_sueldo(self):
+        return self.horas * self.valor_hora
+class EmpleadoFijo(Empleado):
+    def __init__(self, sueldo_fijo):
+        self.sueldo_fijo = sueldo_fijo
+    def calcular_sueldo(self):
+        return self.sueldo_fijo
