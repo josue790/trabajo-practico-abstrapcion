@@ -14,3 +14,8 @@ class EmpleadoFijo(Empleado):
         self.sueldo_fijo = sueldo_fijo
     def calcular_sueldo(self):
         return self.sueldo_fijo
+if __name__ == "__main__":
+    emp1 = EmpleadoPorHora(40, 500)
+    emp2 = EmpleadoFijo(30000)
+    print("Sueldo Empleado por Hora:", emp1.calcular_sueldo())  
+    print("Sueldo Empleado Fijo:", emp2.calcular_sueldo())       
