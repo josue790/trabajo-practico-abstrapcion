@@ -9,3 +9,8 @@ class Email(Notificacion):
 class SMS(Notificacion):
     def enviar(self, mensaje):
         return "Enviando SMS: " + mensaje
+if __name__ == "__main__":
+    noti1 = Email()
+    noti2 = SMS()
+    print("Notificación Email:", noti1.enviar("Hola mundo"))     
+    print("Notificación SMS:", noti2.enviar("Hola SMS")) 
