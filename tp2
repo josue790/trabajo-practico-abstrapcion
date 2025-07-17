@@ -13,5 +13,5 @@ if __name__ == "__main__":
     # Pagos
     pago1 = TarjetaCredito()
     pago2 = PayPal()
-    print("Resultado Pago Tarjeta:", pago1.procesar_pago(150))   # Pago con tarjeta de 150
+    print("Resultado Pago Tarjeta:", pago1.procesar_pago(150))  
     print("Resultado Pago PayPal:", pago2.procesar_pago(200))
