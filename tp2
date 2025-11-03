@@ -5,13 +5,7 @@ class Pago(ABC):
         pass
 class TarjetaCredito(Pago):
     def procesar_pago(self, monto):
-        return "Pago con tarjeta de " + str(monto)
-class AstroPlay(Pago):
+        return f"Procesando pago de ${monto} con tarjeta de crédito."
+class PayPal(Pago):
     def procesar_pago(self, monto):
-        return "Pago con AstroPlay de " + str(monto)
-if __name__ == "__main__":
-    # Pagos
-    pago1 = TarjetaCredito()
-    pago2 = AstroPlay()
-    print("Resultado Pago Tarjeta:", pago1.procesar_pago(150))  
-    print("Resultado Pago PayPal:", pago2.procesar_pago(200))
+        return f"Procesando pago de ${monto} mediante PayPal."
