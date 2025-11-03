@@ -4,18 +4,13 @@ class Empleado(ABC):
     def calcular_sueldo(self):
         pass
 class EmpleadoPorHora(Empleado):
-    def __init__(self, horas, valor_hora):
+    def __init__(self, horas, tarifa):
         self.horas = horas
-        self.valor_hora = valor_hora
+        self.tarifa = tarifa
     def calcular_sueldo(self):
-        return self.horas * self.valor_hora
+        return self.horas * self.tarifa
 class EmpleadoFijo(Empleado):
-    def __init__(self, sueldo_fijo):
-        self.sueldo_fijo = sueldo_fijo
+    def __init__(self, sueldo_mensual):
+        self.sueldo_mensual = sueldo_mensual
     def calcular_sueldo(self):
-        return self.sueldo_fijo
-if __name__ == "__main__":
-    emp1 = EmpleadoPorHora(40, 500)
-    emp2 = EmpleadoFijo(30000)
-    print("Sueldo Empleado por Hora:", emp1.calcular_sueldo())  
-    print("Sueldo Empleado Fijo:", emp2.calcular_sueldo())       
+        return self.sueldo_mensual
